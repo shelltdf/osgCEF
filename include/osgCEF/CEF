@@ -1,0 +1,26 @@
+
+#ifndef OSGCEF_CEF_H
+#define OSGCEF_CEF_H
+
+#include <osgCEF/Export>
+
+#include <osg/Referenced>
+#include <osg/ref_ptr>
+
+#include <cef_app.h>
+#include "include/wrapper/cef_helpers.h"
+
+
+class OSGCEF_EXPORT CEF
+{
+public:
+
+    static void init();
+    static void shutdown();
+    static void update();
+    
+private:
+};
+
+
+#endif //OSGCEF_CEF_H

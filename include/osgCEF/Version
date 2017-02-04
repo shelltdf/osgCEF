@@ -1,0 +1,19 @@
+/* -*-c++-*- osgCEF - Copyright(C) 2010-2017 Wang Guanqun
+*
+* This module is licensed based on the GNU Lesser General Public License
+* version 2.1 ("LGPL"), which is located at:
+* http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+*/
+
+#ifndef OSGCEF_VERSION_H
+#define OSGCEF_VERSION_H
+
+#include <osgCEF/Export>
+
+extern "C" 
+{
+    //extern OSGCORE_EXPORT const char* osgCEFGetVersion();
+    //extern OSGCORE_EXPORT const char* osgCEFGetLibraryName();
+}
+
+#endif//OSGCEF_VERSION_H

@@ -1,0 +1,52 @@
+
+#ifndef OSGCEF_BROWSER_H
+#define OSGCEF_BROWSER_H
+
+#include <osgCEF/Export>
+
+#include <osg/Group>
+#include <osg/Image>
+#include <osg/Texture2D>
+#include <osgGA/GUIEventHandler>
+
+#include "cef_client.h"
+
+#include <osgCEF/CEF>
+
+
+class OSGCEF_EXPORT Browser
+    :public osg::Group
+{
+public:
+    Browser();
+    ~Browser();
+
+    void load(const char* url);
+    void resize(int w, int h);
+    void update();
+
+    //mouse and key event
+    void mouseMove(int x, int y);
+    void mouseClick(int mouse_btn, int push_down); //1 left 2 middle 3 right
+    void MouseWheel(int up);
+    void keyPress(int key);
+
+    //js execute and callback
+    void executeJS(const char* command);
+
+private:
+
+    CefRefPtr<CefBrowser> browser;
+    CefRenderHandler* renderHandler;
+
+    osg::ref_ptr<osg::Texture2D> texture;
+    osg::ref_ptr<osg::Image> image;
+
+    int mouseX;
+    int mouseY;
+
+public:
+
+};
+
+#endif //OSGCEF_BROWSER_H
